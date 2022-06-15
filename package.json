@@ -1,0 +1,24 @@
+{
+  "name": "@jiuwu-cli/prd-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bin/index.js",
+  "bin": {
+    "prd-cli": "bin/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fs-extra": "^10.1.0",
+    "inquirer": "^8.2.4",
+    "node-xlsx": "^0.21.0",
+    "user-home": "^3.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
