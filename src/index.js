@@ -64,13 +64,14 @@ async function invoke() {
   }
     
   const askForOtherData = async () => {
-    const { neeInputCostScores } = await inquirer.prompt({
+    const { needInputCostScores } = await inquirer.prompt({
       type: 'confirm',
-      name: 'neeInputCostScores',
-      message: '是否输入成本分，选择否成本分将默认都为5分',
+      name: 'needInputCostScores',
+      message: '是否输入成本分，选择是将需要逐个输入成本分',
+      default: true,
     })
 
-    if (neeInputCostScores) {
+    if (needInputCostScores) {
       for (let i = 0; i < prdCount; i++) {    
         const prdName = colNameData[i * 2 + prdFrom]
 
@@ -80,7 +81,7 @@ async function invoke() {
           message: `请输入"${prdName}"的成本分`,
         })
 
-        constScoreData.push(answer.costScore)
+        costScoreData.push(answer.costScore)
       }
     } else {
       for (let i = 0; i < prdCount; i++) { 
